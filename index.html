@@ -228,71 +228,67 @@
             height: 600px;
         }
         
-        /* Gallery Section */
-        .gallery-section {
+        /* Partners Section */
+        .partners-section {
             padding: 5rem 1rem;
             background: white;
         }
-        
-        .gallery-grid {
+
+        .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+        .partner-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 250px;
+            text-decoration: none;
+            color: inherit;
         }
-        
-        .gallery-item:nth-child(2) {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-        
-        .gallery-item:nth-child(3) {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+        .partner-logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
-        
-        .gallery-item:nth-child(4) {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+
+        .partner-logo img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
         }
-        
-        .gallery-item:nth-child(5) {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        }
-        
-        .gallery-item:nth-child(6) {
-            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .gallery-item-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-        }
-        
-        .gallery-item h3 {
-            font-size: 1.5rem;
+
+        .partner-name {
+            font-size: 1.3rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
+            color: var(--text-dark);
         }
-        
-        .gallery-item p {
-            opacity: 0.9;
+
+        .partner-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
         
         /* About Section */
@@ -427,7 +423,7 @@
                 height: 400px;
             }
             
-            .gallery-grid {
+            .partners-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -476,41 +472,25 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
+    <!-- Partners Section -->
+    <section class="partners-section">
         <div class="container">
-            <h2 class="section-title">Past Events</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>German Movie Night</h3>
-                        <p>October 2024</p>
+            <h2 class="section-title">Club Partnerships</h2>
+            <div class="partners-grid">
+                <a href="https://ntuqc-website.vercel.app/" target="_blank" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/partners/ntu-quantum-club.png" alt="NTU Quantum Club Logo">
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>NTU World Carnival (Food Festival)</h3>
-                        <p>September 2024</p>
+                    <div class="partner-name">NTU Quantum Club</div>
+                    <div class="partner-description">臺大量子應用社 — promoting quantum science and technology education at NTU</div>
+                </a>
+                <a href="https://linktr.ee/ntumlc" target="_blank" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/partners/ntu-mlc.jpeg" alt="NTU Multilingual Conversation Club Logo">
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>Language Exchange Events</h3>
-                        <p>August 2024</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>Cultural Dance Workshop</h3>
-                        <p>June 2024</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-item-content">
-                        <h3>Moon Festival BBQ Party</h3>
-                        <p>May 2024</p>
-                    </div>
-                </div>
+                    <div class="partner-name">NTU Multilingual Conversation Club</div>
+                    <div class="partner-description">臺大多國語言會話練習社 — practicing conversation in multiple languages</div>
+                </a>
             </div>
         </div>
     </section>
